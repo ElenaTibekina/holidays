@@ -1,0 +1,20 @@
+header {
+  min-height: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  background-color: $color-primary;
+  overflow: hidden;
+
+  clip-path: polygon(0 0, 100% 0, 100% 83%, 0 100%);
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 83%, 0 100%);
+
+  @include respond(phone) {
+    height: 100vh;
+    clip-path: polygon(0 0, 100% 0, 100% 92%, 0 100%);
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 92%, 0 100%);
+  }
+
+  @include respond(small-phone) {
+    height: 100%;
+  }
+}

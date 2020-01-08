@@ -1,0 +1,61 @@
+.icons-container {
+  position: relative;
+  max-width: 100%;
+  min-height: 100%;
+  display: flex;
+  transform: rotate(-5deg);
+  overflow: hidden;
+
+  @include respond(tab-port) {
+    justify-content: flex-end;
+    padding-left: 75rem;
+    padding-bottom: 0;
+    transform: rotate(-8deg);
+  }
+
+  @include respond(phone) {
+    padding-left: 60rem;
+    padding-bottom: 0;
+  }
+
+  @include respond(small-phone) {
+    transform: rotate(-5deg);
+    padding-left: 50rem;
+  }
+}
+
+.icons-box {
+  display: flex;
+  padding: 0 10rem;
+
+  @include respond(phone) {
+    transform: scale(0.8);
+    padding: 0;
+  }
+
+  @include respond(small-phone) {
+    transform: scale(0.5);
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: -5rem;
+    }
+
+    &-1 {
+      z-index: 5;
+    }
+
+    &-2 {
+      z-index: 4;
+    }
+
+    &-3 {
+      z-index: 3;
+    }
+
+    &-4 {
+      z-index: 2;
+    }
+  }
+}

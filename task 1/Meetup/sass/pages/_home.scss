@@ -1,0 +1,135 @@
+.section-welcome {
+  padding: 0 16.5rem;
+  width: 100%;
+  margin-bottom: 16rem;
+
+  @include respond(tab-land) {
+    padding: 0 5rem;
+    margin-bottom: 0;
+  }
+  @include respond(tab-port) {
+    padding: 0 1rem;
+    margin-bottom: 5rem;
+  }
+}
+
+.section-elite {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 70rem;
+  width: 100%;
+  background-color: $color-primary;
+
+  clip-path: polygon(0 16%, 100% 0%, 100% 78%, 0% 100%);
+  -webkit-clip-path: polygon(0 16%, 100% 0%, 100% 78%, 0% 100%);
+
+  padding-left: 53rem;
+  padding-right: 16rem;
+  padding-bottom: 10rem;
+  width: 100%;
+
+  @include respond(tab-land) {
+    padding: 0;
+  }
+
+  @include respond(tab-port) {
+    padding: 0 10rem;
+    clip-path: polygon(0 5%, 100% 0%, 100% 85%, 0% 100%);
+    -webkit-clip-path: polygon(0 8%, 100% 0%, 100% 90%, 0% 100%);
+  }
+  @include respond(small-phone) {
+    padding: 2rem;
+  }
+  @include respond(small-phone) {
+    padding: 3rem;
+    clip-path: polygon(0 5%, 100% 0%, 100% 92%, 0% 100%);
+    -webkit-clip-path: polygon(0 5%, 100% 0%, 100% 95%, 0% 100%);
+  }
+}
+
+.section-speakers {
+  padding: 0 20rem;
+
+  @include respond(big-desktop) {
+    padding: 0 40rem;
+  }
+  @include respond(tab-port) {
+    padding: 0 2rem;
+  }
+}
+
+.section-sponsors {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  color: $color-white;
+  align-items: center;
+  justify-content: center;
+  min-height: 70rem;
+  width: 100%;
+  background-color: $color-primary;
+  clip-path: polygon(0 16%, 100% 0%, 100% 78%, 0% 100%);
+  -webkit-clip-path: polygon(0 16%, 100% 0%, 100% 78%, 0% 100%);
+
+  padding: 0 36rem;
+  padding-bottom: 10rem;
+  width: 100%;
+
+  @include respond(tab-land) {
+    padding: 0;
+  }
+
+  @include respond(tab-port) {
+    padding: 0 10rem;
+    clip-path: polygon(0 5%, 100% 0%, 100% 85%, 0% 100%);
+    -webkit-clip-path: polygon(0 8%, 100% 0%, 100% 90%, 0% 100%);
+  }
+  @include respond(small-phone) {
+    padding: 3rem;
+    clip-path: polygon(0 5%, 100% 0%, 100% 92%, 0% 100%);
+    -webkit-clip-path: polygon(0 5%, 100% 0%, 100% 95%, 0% 100%);
+  }
+}
+
+.section-past-events {
+  padding-bottom: 10rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 9rem;
+  // align-items: center;
+  padding: 0 10rem;
+  @include respond(tab-land) {
+    padding: 0 5rem;
+  }
+  @include respond(tab-port) {
+    margin-bottom: 3rem;
+  }
+  @include respond(phone) {
+    padding: 0 1rem;
+  }
+}
+
+.section-location {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  overflow: hidden;
+  position: relative;
+
+  &__map {
+    & > iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      z-index: -1;
+      filter: brightness(60%);
+    }
+  }
+}

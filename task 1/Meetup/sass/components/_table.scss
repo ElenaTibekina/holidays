@@ -1,0 +1,55 @@
+.section-time-table {
+  display: flex;
+  align-items: center;
+
+  width: 100%;
+  min-height: auto;
+  color: $color-white;
+  padding-bottom: 2rem;
+}
+
+.time-table {
+  background-color: $color-primary;
+  width: 100rem;
+  height: 38rem;
+  border-radius: 2.5rem;
+  font-size: 2.2rem;
+
+  @include respond(phone) {
+    font-size: 1.4rem;
+  }
+
+  border: none;
+  border-collapse: collapse;
+  overflow: hidden;
+
+  width: 100%;
+
+  &__head {
+    background-color: $color-primary-green;
+    font-size: 3rem;
+    min-height: 8rem;
+    @include respond(phone) {
+      font-size: 1.6rem;
+    }
+  }
+
+  &__row > td,
+  th {
+    text-align: left;
+    padding-left: 5rem;
+
+    @include respond(phone) {
+      padding-left: 2rem;
+      height: 5rem;
+    }
+  }
+
+  &__row--grey-light {
+    background-color: $color-light-grey;
+  }
+
+  &__row--grey-dark {
+    background-color: $color-dark-grey;
+  }
+}
